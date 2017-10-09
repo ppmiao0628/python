@@ -32,3 +32,19 @@ if __name__ == '__main__':
     rp.start()
     wp.join()
     rp.terminate()
+
+
+"""
+process 27857 start to write...
+put a to the queue
+process 27858 start to read...
+read a from the queue
+put b to the queue
+read b from the queue
+put c to the queue
+read c from the queue
+put d to the queue
+read d from the queue
+
+Process finished with exit code 0
+"""
