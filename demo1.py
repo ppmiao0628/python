@@ -9,9 +9,16 @@ import os, time, random
 import pickle
 import subprocess
 
-print('$ nslookup www.python.org')
-r = subprocess.call(['nslookup', 'www.baidu.com'])
-print('exit code:', r)
+#贪婪匹配
+m = re.match(r'(\d+)(0*)$', '120300')
+print(m.groups())
+#非贪婪匹配
+m = re.match(r'(\d+?)(0*)$', '120300')
+print(m.groups())
+
+# print('$ nslookup www.python.org')
+# r = subprocess.call(['nslookup', 'www.baidu.com'])
+# print('exit code:', r)
 
 
 # def long_time_task(name):
