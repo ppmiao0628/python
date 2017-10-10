@@ -8,13 +8,27 @@ from multiprocessing import Pool
 import os, time, random
 import pickle
 import subprocess
+import hashlib
 
+md5 = hashlib.md5()
+# md5.update('/Users/mpp/Project/PycharmProjects/py3.6/bin/python /Users/mpp/Project/PycharmProjects/python3demo/demo1.py'.encode('utf-8'))
+# print(md5.hexdigest())
+
+md5.update('/Users/mpp/Project/PycharmProjects/py3.6/bin/python'.encode('utf-8'))
+md5.update(' /Users/mpp/Project/PycharmProjects/python3demo/demo1.py'.encode('utf-8'))
+print('521b7fd1b3756d2a231bcd03f63ca02b')
+print(md5.hexdigest())
+#验证邮件
+# m = re.match(r'[0-9a-zA-Z]{1,5}', '120483084dfj230')
+# recompile = re.compile(r'^[0-9a-zA-Z]+@[0-9a-zA-Z]+\.[0-9a-zA-Z]+$')
+# m = recompile.match('s.wwww23@gima.com')
+# print(m.group())
 #贪婪匹配
-m = re.match(r'(\d+)(0*)$', '120300')
-print(m.groups())
-#非贪婪匹配
-m = re.match(r'(\d+?)(0*)$', '120300')
-print(m.groups())
+# m = re.match(r'(\d+)(0*)$', '120300')
+# print(m.groups())
+# #非贪婪匹配
+# m = re.match(r'(\d+?)(0*)$', '120300')
+# print(m.groups())
 
 # print('$ nslookup www.python.org')
 # r = subprocess.call(['nslookup', 'www.baidu.com'])
